@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'maven_3_9_0'
+        maven 'maven_3_8_6'
     }
     stages{
         stage('Build Maven'){
@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t javatechie/devops-integration .'
+                    sh 'docker build -t nehru/devops-integration .'
                 }
             }
         }
